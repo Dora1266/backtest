@@ -1,0 +1,123 @@
+/* 全局重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 主题色 */
+  :root {
+    --color-bg: #1a202c; /* 深色背景 */
+    --color-bg-gradient: linear-gradient(to bottom right, #2d3748, #4a5568); /* 渐变背景 */
+    --color-primary: #9f7aea; /* 主色 */
+    --color-secondary: #63b3ed; /* 辅助色 */
+    --color-text: #edf2f7; /* 文字色 */
+    --color-error: #e53e3e; /* 错误色 */
+    --color-success: #38a169; /* 成功色 */
+    --font-family: 'Arial', sans-serif; /* 字体设置 */
+  }
+  
+  /* 全局字体设置 */
+  body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+  
+  /* 容器样式 */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* 按钮样式 */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  /* 表格样式 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th {
+    background: var(--color-bg-gradient);
+    color: var(--color-text);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #2d3748;
+  }
+  
+  tr:hover {
+    background-color: #2d3748; /* 行悬停效果 */
+  }
+  
+  /* 提示信息样式 */
+  .text-center {
+    text-align: center;
+  }
+  
+  .py-8 {
+    padding: 2rem 0;
+  }
+  
+  /* Flexbox 布局 */
+  .flex {
+    display: flex;
+  }
+  
+  .flex-grow {
+    flex-grow: 1;
+  }
+  
+  /* 过渡效果 */
+  .transition {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .hover\:bg-gray-700:hover {
+    background-color: #4a5568; /* 悬停效果 */
+  }
+  
+  /* 其他 */
+  .text-red-400 {
+    color: var(--color-error);
+  }
+  
+  .text-green-400 {
+    color: var(--color-success);
+  }
+  
+  /* 自定义滚动条（如果需要） */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #2d3748;
+  }
+  

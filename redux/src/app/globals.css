@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  /* 自定义颜色变量 */
+  --color-gray-900: #111827;
+  --color-gray-800: #1f2937;
+  --color-gray-700: #374151;
+  --color-purple-700: #6d28d9;
+  --color-blue-700: #1d4ed8;
+  --color-green-400: #4ade80;
+  --color-red-400: #f87171;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* 自定义渐变背景 */
+.bg-gradient-gray {
+  background: linear-gradient(to bottom right, var(--color-gray-900), var(--color-gray-800));
+}
+
+/* 自定义渐变表头 */
+.bg-gradient-header {
+  background: linear-gradient(to right, var(--color-purple-700), var(--color-blue-700));
+}
+
+/* 自定义颜色类 */
+.text-green-400 {
+  color: var(--color-green-400);
+}
+
+.text-red-400 {
+  color: var(--color-red-400);
+}
+
+.text-gray-300 {
+  color: var(--color-gray-300);
+}
+
+.text-gray-400 {
+  color: var(--color-gray-400);
+}
+
+.bg-gray-700 {
+  background-color: var(--color-gray-700);
+}
+
+.hover\:bg-gray-700:hover {
+  background-color: var(--color-gray-700);
+}
